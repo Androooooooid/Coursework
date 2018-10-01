@@ -13,14 +13,14 @@
 
 Route::group(['middleware'=>'web'],function() {
 	
-	Route::match(['get','post'],'/',['uses'=>'IndexConteroller@execute','as'=>'home']);
+	Route::match(['get','post'],'/',['uses'=>'IndexController@execute','as'=>'home']);
 	Route::get('/page/{alias}',['uses'=>'PageController@execute','as'=>'page']);
 	
 	Route::auth();
 	
 });
 
-Route::group(['prefix'=>'admin','middleware'=>'auth'], function(); {
+Route::group(['prefix'=>'admin','middleware'=>'auth'], function() {
 	
 	Route::get('/',function() {
 		
@@ -45,4 +45,5 @@ Route::group(['prefix'=>'sevices'], function() {
 	
 	Route::match(['get','post','delete'],'/edit/',['uses'=>'ServiceController@execute','as'=>'serviceEdit']);
 	
+});
 });
