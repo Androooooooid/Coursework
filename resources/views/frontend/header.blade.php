@@ -8,23 +8,19 @@
                 <h1>SQUAD FREE</h1>
             </a>
         </div>
+        @if (isset($menu))
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#intro">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#service">Service</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Example menu</a></li>
-                        <li><a href="#">Example menu</a></li>
-                        <li><a href="#">Example menu</a></li>
-                    </ul>
-                </li>
+                @foreach($menu as $item)
+                <li><a href="#{{$item['alias']}}">{{$item['title']}}</a></li>
+                @endforeach
+                  
             </ul>
         </div>
+
+        @endif
+      <!-- Collect the nav links, forms, and other content for toggling -->
+        
     </div>
 </nav>

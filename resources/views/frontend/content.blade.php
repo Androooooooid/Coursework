@@ -13,7 +13,7 @@
   <!-- /Section: intro -->
 
   <!-- Section: about -->
-  <section id="about" class="home-section text-center">
+  <section id="people" class="home-section text-center">
     <div class="heading-about">
       <div class="container">
         <div class="row">
@@ -176,7 +176,7 @@
 
 
   <!-- Section: contact -->
-  <section id="contact" class="home-section text-center">
+  <section id="contact_form" class="home-section text-center">
     <div class="heading-contact">
       <div class="container">
         <div class="row">

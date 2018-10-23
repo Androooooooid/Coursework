@@ -19,7 +19,27 @@ class IndexController extends Controller
 		$people = People::all();
 		$contact_form = ContactForm::all();
 	
-		
-		return view('backend.index');
+		$menu = array();
+		foreach ($pages as $page) {
+			$item = array('title' =>$page->name,'alias'=>$page->alias);
+			array_push($menu, $item);
+		}
+
+		$item = array('title'=>'Service','alias'=>'service');
+		array_push($menu, $item);
+
+		$item = array('title'=>'People','alias'=>'people');
+		array_push($menu, $item);
+
+		$item = array('title'=>'Contact','alias'=>'contact_form');
+		array_push($menu, $item);
+
+		return view('backend.index', array(
+											'menu'=>$menu,
+											'pages'=>$page,
+											'Service'=>$service,
+											'People'=>$people,
+											'Contact'=>$contact_form,
+											));
 	}
 }
