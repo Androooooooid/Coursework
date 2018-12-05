@@ -1,93 +1,108 @@
-<section id="intro" class="intro">
 
-    <div class="slogan">
-      <h2>WELCOME TO <span class="text_color">SQUAD</span> </h2>
-      <h4>WE ARE GROUP OF GENTLEMEN MAKING AWESOME WEB WITH BOOTSTRAP</h4>
-    </div>
-    <div class="page-scroll">
-      <a href="#service" class="btn btn-circle">
-				<i class="fa fa-angle-double-down animated"></i>
-			</a>
-    </div>
-  </section>
-  <!-- /Section: intro -->
+@if(isset($pages) && is_object($pages))
 
-  <!-- Section: about -->
-  <section id="people" class="home-section text-center">
-    <div class="heading-about">
+@foreach ($pages as $k=>$page)
+  
+  @if($k*2 == 0)
+
+    <section id="intro" class="intro">
+
+      <div class="slogan">
+        <h2>WELCOME TO <span class="text_color">SQUAD</span> </h2>
+        <h4>WE ARE GROUP OF GENTLEMEN MAKING AWESOME WEB WITH BOOTSTRAP</h4>
+      </div>
+      <div class="page-scroll">
+        <a href="#service" class="btn btn-circle">
+          <i class="fa fa-angle-double-down animated"></i>
+        </a>
+      </div>
+    </section>
+
+  @else
+    <!-- Section: about -->
+    <section id="people" class="home-section text-center">
+      <div class="heading-about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="wow bounceInDown" data-wow-delay="0.4s">
+                <div class="section-heading">
+                  <h2>About us</h2>
+                  <i class="fa fa-2x fa-angle-down"></i>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="container">
+
         <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow bounceInDown" data-wow-delay="0.4s">
-              <div class="section-heading">
-                <h2>About us</h2>
-                <i class="fa fa-2x fa-angle-down"></i>
+          <div class="col-lg-2 col-lg-offset-5">
+            <hr class="marginbot-50">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="wow bounceInUp" data-wow-delay="0.2s">
+              <div class="team boxed-grey">
+                <div class="inner">
+                  <h5>Andrey Kytyumov</h5>
+                  <p class="subtitle">Pixel Crafter</p>
+                  <div class="avatar"><img src="{{ asset('assets/img/team/1.jpg')}}" alt="" class="img-responsive img-circle" /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow bounceInUp" data-wow-delay="0.5s">
+              <div class="team boxed-grey">
+                <div class="inner">
+                  <h5>Maura Daniels</h5>
+                  <p class="subtitle">Ruby on Rails</p>
+                  <div class="avatar"><img src="{{ asset('assets/img/team/2.jpg')}}" alt="" class="img-responsive img-circle" /></div>
 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow bounceInUp" data-wow-delay="0.8s">
+              <div class="team boxed-grey">
+                <div class="inner">
+                  <h5>Anna Hanaceck</h5>
+                  <p class="subtitle">jQuery Ninja</p>
+                  <div class="avatar"><img src="{{ asset('assets/img/team/3.jpg')}}" alt="" class="img-responsive img-circle" /></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="wow bounceInUp" data-wow-delay="1s">
+              <div class="team boxed-grey">
+                <div class="inner">
+                  <h5>Tom Petterson</h5>
+                  <p class="subtitle">Typographer</p>
+                  <div class="avatar"><img src="{{ asset('assets/img/team/4.jpg')}}" alt="" class="img-responsive img-circle" /></div>
+
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container">
+    </section>
+    <!-- /Section: about -->
+  @endif
 
-      <div class="row">
-        <div class="col-lg-2 col-lg-offset-5">
-          <hr class="marginbot-50">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <div class="wow bounceInUp" data-wow-delay="0.2s">
-            <div class="team boxed-grey">
-              <div class="inner">
-                <h5>Andrey Kytyumov</h5>
-                <p class="subtitle">Pixel Crafter</p>
-                <div class="avatar"><img src="{{ asset('assets/img/team/1.jpg')}}" alt="" class="img-responsive img-circle" /></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow bounceInUp" data-wow-delay="0.5s">
-            <div class="team boxed-grey">
-              <div class="inner">
-                <h5>Maura Daniels</h5>
-                <p class="subtitle">Ruby on Rails</p>
-                <div class="avatar"><img src="{{ asset('assets/img/team/2.jpg')}}" alt="" class="img-responsive img-circle" /></div>
+@endforeach
 
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow bounceInUp" data-wow-delay="0.8s">
-            <div class="team boxed-grey">
-              <div class="inner">
-                <h5>Anna Hanaceck</h5>
-                <p class="subtitle">jQuery Ninja</p>
-                <div class="avatar"><img src="{{ asset('assets/img/team/3.jpg')}}" alt="" class="img-responsive img-circle" /></div>
 
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="wow bounceInUp" data-wow-delay="1s">
-            <div class="team boxed-grey">
-              <div class="inner">
-                <h5>Tom Petterson</h5>
-                <p class="subtitle">Typographer</p>
-                <div class="avatar"><img src="{{ asset('assets/img/team/4.jpg')}}" alt="" class="img-responsive img-circle" /></div>
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /Section: about -->
+@endif
+  
 
 
   <!-- Section: services -->
@@ -251,25 +266,25 @@
             <h5>Main Office</h5>
 
             <address>
-				  <strong>Squas Design, Inc.</strong><br>
-				  Tower 795 Folsom Ave, Beautiful Suite 600<br>
-				  San Francisco, CA 94107<br>
-				  <abbr title="Phone">P:</abbr> (123) 456-7890
-				</address>
+          <strong>Squas Design, Inc.</strong><br>
+          Tower 795 Folsom Ave, Beautiful Suite 600<br>
+          San Francisco, CA 94107<br>
+          <abbr title="Phone">P:</abbr> (123) 456-7890
+        </address>
 
             <address>
-				  <strong>Email</strong><br>
-				  <a href="mailto:#">email.name@example.com</a>
-				</address>
+          <strong>Email</strong><br>
+          <a href="mailto:#">email.name@example.com</a>
+        </address>
             <address>
-				  <strong>We're on social networks</strong><br>
-                       	<ul class="company-social">
+          <strong>We're on social networks</strong><br>
+                        <ul class="company-social">
                             <li class="social-facebook"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li class="social-twitter"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <li class="social-dribble"><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
                             <li class="social-google"><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                         </ul>
-				</address>
+        </address>
 
           </div>
         </div>
@@ -286,8 +301,8 @@
           <div class="wow shake" data-wow-delay="0.4s">
             <div class="page-scroll marginbot-30">
               <a href="#intro" id="totop" class="btn btn-circle">
-							<i class="fa fa-angle-double-up animated"></i>
-						</a>
+              <i class="fa fa-angle-double-up animated"></i>
+            </a>
             </div>
           </div>
           <p>&copy;SquadFREE. All rights reserved.</p>

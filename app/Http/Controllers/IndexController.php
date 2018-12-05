@@ -25,10 +25,10 @@ class IndexController extends Controller
 			array_push($menu, $item);
 		}
 
-		$item = array('title'=>'Service','alias'=>'service');
+		$item = array('title'=>'People','alias'=>'people');
 		array_push($menu, $item);
 
-		$item = array('title'=>'People','alias'=>'people');
+		$item = array('title'=>'Service','alias'=>'service');
 		array_push($menu, $item);
 
 		$item = array('title'=>'Contact','alias'=>'contact_form');
@@ -37,8 +37,8 @@ class IndexController extends Controller
 		return view('backend.index', array(
 											'menu'=>$menu,
 											'pages'=>$page,
-											'Service'=>$service,
 											'People'=>$people,
+											'Service'=>$service,
 											'Contact'=>$contact_form,
 											));
 	}
