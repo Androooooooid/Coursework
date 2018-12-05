@@ -1,9 +1,6 @@
 
 @if(isset($pages) && is_object($pages))
 
-@foreach ($pages as $k=>$page)
-  
-  @if($k*2 == 0)
 
     <section id="intro" class="intro">
 
@@ -18,7 +15,6 @@
       </div>
     </section>
 
-  @else
     <!-- Section: about -->
     <section id="people" class="home-section text-center">
       <div class="heading-about">
@@ -95,9 +91,8 @@
       </div>
     </section>
     <!-- /Section: about -->
-  @endif
 
-@endforeach
+
 
 
 
